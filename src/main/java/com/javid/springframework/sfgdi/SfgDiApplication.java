@@ -1,9 +1,6 @@
 package com.javid.springframework.sfgdi;
 
-import com.javid.springframework.sfgdi.controllers.ConstructorInjectedController;
-import com.javid.springframework.sfgdi.controllers.MyController;
-import com.javid.springframework.sfgdi.controllers.PropertyInjectedController;
-import com.javid.springframework.sfgdi.controllers.SetterInjectedController;
+import com.javid.springframework.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -26,6 +23,10 @@ public class SfgDiApplication {
 
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) context.getBean("constructorInjectedController");
         log("Constructor", constructorInjectedController.getGreeting());
+
+
+        I18nController i18nController = (I18nController) context.getBean("i18nController");
+        log("@Profile", i18nController.sayHello());
     }
 
     private static void log(String title, String log) {
