@@ -27,6 +27,9 @@ public class SfgDiApplication {
 
         I18nController i18nController = (I18nController) context.getBean("i18nController");
         log("@Profile", i18nController.sayHello());
+
+        PetController petController = (PetController) context.getBean("petController");
+        log("Pet Controller", petController.whichPetIsTheBest());
     }
 
     private static void log(String title, String log) {
