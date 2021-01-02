@@ -34,6 +34,6 @@ public class SfgDiApplication {
 
     private static void log(String title, String log) {
         String splitter = "--------------";
-        System.out.printf("\n%s %s %s\n%s\n", splitter, title, splitter, log);
+        System.out.printf("%n%s %s %s%n%s%n", splitter, title, splitter, log);
     }
 }
