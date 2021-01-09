@@ -14,22 +14,11 @@ public class SfgDiApplication {
         MyController myController = (MyController) context.getBean("myController");
         log("Primary", myController.sayHello());
 
-
-        PropertyInjectedController propertyInjectedController = (PropertyInjectedController) context.getBean("propertyInjectedController");
-        log("Property", propertyInjectedController.getGreeting());
-
-        SetterInjectedController setterInjectedController = (SetterInjectedController) context.getBean("setterInjectedController");
-        log("Setter", setterInjectedController.getGreeting());
-
-        ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) context.getBean("constructorInjectedController");
-        log("Constructor", constructorInjectedController.getGreeting());
-
-
-        I18nController i18nController = (I18nController) context.getBean("i18nController");
-        log("@Profile", i18nController.sayHello());
-
-        PetController petController = (PetController) context.getBean("petController");
-        log("Pet Controller", petController.whichPetIsTheBest());
+        log("Property", context.getBean(PropertyInjectedController.class).getGreeting());
+        log("Setter", context.getBean(SetterInjectedController.class).getGreeting());
+        log("Constructor", context.getBean(ConstructorInjectedController.class).getGreeting());
+        log("@Profile", context.getBean(I18nController.class).sayHello());
+        log("Pet Controller", context.getBean(PetController.class).whichPetIsTheBest());
     }
 
     private static void log(String title, String log) {
