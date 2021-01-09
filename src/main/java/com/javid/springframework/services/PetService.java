@@ -1,4 +1,4 @@
-package com.javid.springframework.sfgdi.services;
+package com.javid.springframework.services;
 
 public interface PetService {
 

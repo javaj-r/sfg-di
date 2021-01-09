@@ -1,4 +1,4 @@
-package com.javid.springframework.sfgdi.services;
+package com.javid.springframework.services;
 
 import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;

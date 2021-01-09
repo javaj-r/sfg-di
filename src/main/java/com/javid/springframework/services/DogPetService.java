@@ -1,13 +1,13 @@
-package com.javid.springframework.sfgdi.services;
+package com.javid.springframework.services;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile("Cat")
-public class CatPetService implements PetService {
+@Profile({"dog", "default"})
+public class DogPetService implements PetService {
     @Override
     public String getPetType() {
-        return "Cats";
+        return "Dogs";
     }
 }
