@@ -4,10 +4,8 @@ import com.javid.springframework.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
-@ComponentScan(basePackages = {"com.javid.springframework.services", "com.javid.springframework.sfgdi"})
+@SpringBootApplication(scanBasePackages = {"com.javid.springframework.services", "com.javid.springframework.sfgdi"})
 public class SfgDiApplication {
 
     public static void main(String[] args) {
